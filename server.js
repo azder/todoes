@@ -25,10 +25,11 @@ import routeup from "./server/init/routeup";
 
 
 const log = logger('[SERVER]');
+const LOAD = 'load';
 
 log('starting with', conf.args(), '...');
 
-const filename = fname2abs(process.cwd(), conf('load'));
+const filename = fname2abs(process.cwd(), conf(LOAD));
 
 if (filename) {
     loadup(filename);
