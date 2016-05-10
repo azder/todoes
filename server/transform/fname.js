@@ -7,7 +7,7 @@
 
 import path from 'path';
 
-export default filename =>
+export default (root, filename) =>
     !filename
         ?
         ''
@@ -16,5 +16,5 @@ export default filename =>
             ?
             filename
             :
-            path.join(process.cwd(), filename)
+            path.join(root, filename)
 ;

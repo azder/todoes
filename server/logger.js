@@ -11,3 +11,4 @@ export default tag =>
         console.log.apply(null, [tag, first, ...rest]);
         return first;
     }
+;

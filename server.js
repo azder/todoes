@@ -11,6 +11,7 @@
 'use strict'; // ALWAYS
 
 
+//noinspection JSUnresolvedVariable
 import restify from 'restify';
 
 import logger from './server/logger';
@@ -27,7 +28,7 @@ const log = logger('[SERVER]');
 
 log('starting with', conf.args(), '...');
 
-const filename = fname2abs(conf('load'));
+const filename = fname2abs(process.cwd(), conf('load'));
 
 if (filename) {
     loadup(filename);
